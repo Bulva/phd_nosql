@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/../BookScraper/.idea/BookScraper.iml" filepath="$PROJECT_DIR$/../BookScraper/.idea/BookScraper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Python-University-Course/.idea/Python-University-Course.iml" filepath="$PROJECT_DIR$/../Python-University-Course/.idea/Python-University-Course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../Regular-expression-basics/.idea/Regular-expression-basics.iml" filepath="$PROJECT_DIR$/../Regular-expression-basics/.idea/Regular-expression-basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../diplomka/.idea/diplomka.iml" filepath="$PROJECT_DIR$/../diplomka/.idea/diplomka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../obce/.idea/obce.iml" filepath="$PROJECT_DIR$/../obce/.idea/obce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/personal_web.iml" filepath="$PROJECT_DIR$/.idea/personal_web.iml" />
+    </modules>
+  </component>
+</project>
