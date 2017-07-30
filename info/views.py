@@ -1,18 +1,33 @@
 from django.shortcuts import render
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+from .models import Article
 
 
-# Create your views here.
-def index(request):
-    return render(request, 'index.html')
+class ArticleListView(ListView):
+    queryset = Article.objects.order_by('-published')
+    template_name = 'info/index.html'
+    context_object_name = 'articles'
+
+    def get_context_data(self, **kwargs):
+        return super(ArticleListView, self).get_context_data(**kwargs)
 
 
-def bio(request):
-    return render(request, 'bio.html')
+class ArticleDetailView(DetailView):
+    model = Article
+    context_object_name = 'article'
+
+    def get_context_data(self, **kwargs):
+        return super(ArticleDetailView, self).get_context_data(**kwargs)
 
 
-def skills(request):
-    return render(request, 'skills.html')
+def about_me(request):
+    return render(request, 'info/about-me.html')
 
 
-def projects(request):
-    return render(request, 'projects.html')
+def portfolio(request):
+    return render(request, 'info/portfolio.html')
+
+
+def contact(request):
+    return render(request, 'info/contact.html')

@@ -1,0 +1,29 @@
+{% extends 'info/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    {% for article in articles %}
+        <div class="article">
+            <span class="date">{{ article.published }}</span>
+            <span class="tags">
+            {% for tag in article.tags.all %}
+                {% if forloop.last %}
+                    <a href="">#{{ tag.name }}</a>
+                {% else %}
+                    <a href="">#{{ tag.name }} </a>
+                {% endif %}
+            {% endfor %}
+            </span>
+            <hr />
+            <a href="{% url 'article-detail' article.slug %}"><h3>{{ article.title }}</h3></a>
+            <p class="intro">{{ article.intro }}</p>
+            {{ article.text|truncatewords_html:100|slice:'-4' }}
+            {% ifnotequal article.text article.text|truncatewords_html:20 %}
+                <a class="readmore" href="{% url 'article-detail' article.slug %}">more ...</a>
+            {% endifnotequal %}
+            <br />
+        </div>
+        {% empty %}
+            <p>No articles</p>
+    {% endfor %}
+{% endblock %}
