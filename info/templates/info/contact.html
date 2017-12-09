@@ -1,45 +1,44 @@
-<!DOCTYPE html>
+{% extends 'info/base.html' %}
 {% load staticfiles %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
 
-    <link rel="stylesheet" type="text/css" href="{% static 'info/css/main.css' %}">
+{% block title %}Contact me{% endblock %}
 
-    <link rel="stylesheet" type="text/css" href="{% static 'info/css/bootstrap.min.css' %}">
-    <script src="{% static 'info/js/bootstrap.min.js' %}"></script>
-</head>
-<body>
-<div class="container-fluid">
-    <div class="row">
-        <div id="bio" class="col-sm-3">
-            <img src="{% static 'info/images/profile_photo.png' %}" alt="My profile photo" style="width: 180px;">
-            <h4>Petr Šilhák</h4>
-            <h5>Bulva</h5>
+{% block content %}
+<span class="page-title">Write me a message</span>
+    <p>If you want to get me in touch you can send me a message via form. I will try to write you back as soon as possible.</p>
+<form method="post">
+    {% csrf_token %}
+    <div id="contact-form" class="col-sm-8">
+        <div class="row">
+            {{ form.from_email.label_tag }}
+            {{ form.from_email }}
         </div>
-        <div id="content" class="col-sm-9">
-            <div id="navbar" class="col-sm-12">
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Bio</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Projects</a></li>
-                </ul>
-            </div>
-            <div id="middle" class="col-sm-12">
-                <span class="date">27<sup>th</sup> July, 2017</span>
-                <span class="glyphicon glyphicon-tags"></span><span class="tags"><a href="">PostgreSQL</a>, <a href="">Ubuntu 16.04</a>, <a href="">PostGIS</a></span>
-                <hr />
-                <h3>How to install PostgreSQL on Ubuntu 16.04 and create new user</h3>
-                <p class="intro">Possim similique dissentiunt cu nam. Melius option vidisse id nec, no iudico dissentiunt has.</p>
-                <p>Bonorum evertitur ius in. Veritus platonem vel ea, eum id invenire disputando.Duo at dicant integre petentium. Error sadipscing ut sit. In sed nulla minimum consectetuer, te mea tibique evertitur, qui ex pericula argumentum. Cum an delectus abhorreant, meliore voluptua lucilius ius cu. Et pri impedit consequat voluptaria.</p>
-                <p>Ad mea tritani aperiri integre. Prima viderer accusam sed ne, augue tation pro ex. Eam tractatos consetetur reprehendunt no, oporteat urbanitas necessitatibus ad nam. Quod contentiones nam in, eius reque posse pri ne, nemore dolores deserunt no nec. Qui pertinax electram te, ex wisi solet per, brute luptatum tacimates his et. Volutpat explicari maluisset per ei, mea an reque congue mucius. Eu sit autem salutatus, vis ea dolorum adipiscing, ex erant minimum placerat nec.
-                    Et est utroque voluptatibus, cum ei ridens dignissim. Oblique eripuit honestatis ius ut, laudem consectetuer no quo, nominavi ponderum vis no. Aliquam accusamus ut per, ex usu impetus pericula petentium. Sed ei necessitatibus conclusionemque, vix et tantas putant maluisset. Ad altera euismod pro.</p>
-                <p>Eu choro ridens docendi duo, ea usu sint eripuit. Cum minim inciderint omittantur ex, te nec utinam vituperata concludaturque. Pro facete disputationi te, mel eu modo iriure, eu sint maiestatis eum. Ei minim atomorum intellegat usu, primis bonorum vis id, has no errem expetenda dissentiet. Vis no alia etiam conclusionemque. Mei ceteros democritum cu.</p>
-            </div>
+        <div class="row">
+            {{ form.subject.label_tag }}
+            {{ form.subject }}
         </div>
     </div>
+
+    {{ form.message.label_tag }}
+    {{ form.message }}
+    <button type="submit" class="send-button">Send a message</button>
+</form>
+{% endblock %}
+
+{% block side-info %}
+<div id="about-bulva" class="col-sm-12">
+    <img src="{% static 'info/images/profile_photo.png' %}" alt="My profile photo" style="width: 140px;">
+    <h5>Petr Šilhák</h5>
+    <a href=""><img src="{% static 'info/images/icons/mail.svg' %}" alt="Mail icon" class="icon" /></a>
+    <a href=""><img src="{% static 'info/images/icons/linkedin.svg' %}" alt="LinkedIn icon" class="icon" /></a>
+    <a href=""><img src="{% static 'info/images/icons/github.svg' %}" alt="GitHub icon" class="icon" /></a>
+    <a href=""><img src="{% static 'info/images/icons/stackoverflow.svg' %}" alt="Stackoverflow icon" class="icon" /></a>
+    <a href=""><img src="{% static 'info/images/icons/skype.svg' %}" alt="Skype icon" class="icon" /></a>
 </div>
-</body>
-</html>
+<div id="quote" class="col-sm-12">
+    <p class="quote">“Always code as if the guy who ends up <br />
+    maintaining your code will be <br />
+    a violent psychopath<br /> who knows where you live”<br /></p>
+    <p class="quote-author">John F. Woods</p>
+</div>
+{% endblock %}

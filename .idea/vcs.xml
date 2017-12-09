@@ -3,8 +3,9 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../BookScraper" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../Python-University-Course" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../Regular-expression-basics" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../obce" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../gis4dis" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../interpolace_zaplavy" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../migration-to-postgresql" vcs="Git" />
   </component>
 </project>

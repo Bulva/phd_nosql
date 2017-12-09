@@ -3,11 +3,16 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../BookScraper/.idea/BookScraper.iml" filepath="$PROJECT_DIR$/../BookScraper/.idea/BookScraper.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../Python-University-Course/.idea/Python-University-Course.iml" filepath="$PROJECT_DIR$/../Python-University-Course/.idea/Python-University-Course.iml" />
       <module fileurl="file://$PROJECT_DIR$/../Regular-expression-basics/.idea/Regular-expression-basics.iml" filepath="$PROJECT_DIR$/../Regular-expression-basics/.idea/Regular-expression-basics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../auth_tutorial/.idea/auth_tutorial.iml" filepath="$PROJECT_DIR$/../auth_tutorial/.idea/auth_tutorial.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../cv3_anal/.idea/cv3_anal.iml" filepath="$PROJECT_DIR$/../cv3_anal/.idea/cv3_anal.iml" />
       <module fileurl="file://$PROJECT_DIR$/../diplomka/.idea/diplomka.iml" filepath="$PROJECT_DIR$/../diplomka/.idea/diplomka.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../obce/.idea/obce.iml" filepath="$PROJECT_DIR$/../obce/.idea/obce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../gis4dis/.idea/gis4dis.iml" filepath="$PROJECT_DIR$/../gis4dis/.idea/gis4dis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../interpolace_zaplavy/.idea/interpolace_zaplavy.iml" filepath="$PROJECT_DIR$/../interpolace_zaplavy/.idea/interpolace_zaplavy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../migration-to-postgresql/.idea/migration-to-postgresql.iml" filepath="$PROJECT_DIR$/../migration-to-postgresql/.idea/migration-to-postgresql.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../ostrava/.idea/ostrava.iml" filepath="$PROJECT_DIR$/../ostrava/.idea/ostrava.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/personal_web.iml" filepath="$PROJECT_DIR$/.idea/personal_web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../tutorial/.idea/tutorial.iml" filepath="$PROJECT_DIR$/../tutorial/.idea/tutorial.iml" />
     </modules>
   </component>
 </project>

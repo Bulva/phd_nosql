@@ -2,6 +2,7 @@
 
 html, body {
     height:100%;
+    position: relative;
 }
 
 #bio {
@@ -101,6 +102,13 @@ html, body {
     color: #373737;
 }
 
+.page-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #373737;
+}
+
 .quote {
     font-style: italic;
     text-align: center;
@@ -131,3 +139,44 @@ html, body {
     margin: 10px 0 0 10px;
 }
 
+.form-control {
+    margin-bottom: 10px;
+}
+
+label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #373737;
+}
+
+.send-button {
+    margin: 5px 0 20px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #373737;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #C0B283;
+    background-color: #DCD0C0;
+    float: right;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #e8dbca;
+}
+
+#footer {
+    clear: both;
+    padding: 20px 0 0 0;
+}
+
+#footer p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #373737;
+    text-align: center;
+}

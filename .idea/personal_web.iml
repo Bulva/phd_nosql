@@ -14,6 +14,13 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="gis4dis" />
+    <orderEntry type="module" module-name="interpolace_zaplavy" />
+    <orderEntry type="module" module-name="tutorial" />
+    <orderEntry type="module" module-name="auth_tutorial" />
+    <orderEntry type="module" module-name="migration-to-postgresql" />
+    <orderEntry type="module" module-name="ostrava" />
+    <orderEntry type="module" module-name="cv3_anal" />
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />

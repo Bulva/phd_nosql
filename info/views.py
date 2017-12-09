@@ -2,6 +2,10 @@ from django.shortcuts import render
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from .models import Article
+from django.core.mail import send_mail, BadHeaderError
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import redirect
+from .forms import ContactForm
 
 
 class ArticleListView(ListView):
@@ -30,4 +34,17 @@ def portfolio(request):
 
 
 def contact(request):
-    return render(request, 'info/contact.html')
+    if request.method == 'GET':
+        form = ContactForm()
+    else:
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            subject = form.cleaned_data['subject']
+            from_email = form.cleaned_data['from_email']
+            message = form.cleaned_data['message']
+            try:
+                send_mail(subject, message, from_email, ['admin@example.com'])
+            except BadHeaderError:
+                return HttpResponse('Invalid header found.')
+            return redirect('info/contact.html')
+    return render(request, "info/contact.html", {'form': form})

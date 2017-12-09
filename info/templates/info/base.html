@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Petr Šilhák | {% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" type="text/css" href="{% static 'info/css/main.css' %}">
 
@@ -22,25 +22,15 @@
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
-            <div id="about-bulva" class="col-sm-12">
-                <img src="{% static 'info/images/profile_photo.png' %}" alt="My profile photo" style="width: 140px;">
-                <h5>Petr Šilhák</h5>
-                <a href=""><img src="{% static 'info/images/icons/mail.svg' %}" alt="Mail icon" class="icon" /></a>
-                <a href=""><img src="{% static 'info/images/icons/linkedin.svg' %}" alt="LinkedIn icon" class="icon" /></a>
-                <a href=""><img src="{% static 'info/images/icons/github.svg' %}" alt="GitHub icon" class="icon" /></a>
-                <a href=""><img src="{% static 'info/images/icons/stackoverflow.svg' %}" alt="Stackoverflow icon" class="icon" /></a>
-                <a href=""><img src="{% static 'info/images/icons/skype.svg' %}" alt="Skype icon" class="icon" /></a>
-            </div>
-            <div id="quote" class="col-sm-12">
-                <p class="quote">“Always code as if the guy who ends up <br />
-                maintaining your code will be <br />
-                a violent psychopath<br /> who knows where you live”<br /></p>
-                <p class="quote-author">John F. Woods</p>
-            </div>
+            {% block side-info %}{% endblock %}
         </div>
         <div id="content" class="col-sm-9">
             <div id="middle" class="col-sm-12">
                 {% block content %}{% endblock %}
+            </div>
+            <div class="col-sm-12" id="footer">
+                <hr />
+                <p>© Copyright 2017, Petr Šilhák | <a href="mailto:petrsilhak@hotmail.com">petrsilhak@hotmail.com</a> | Thanks to Neil Hainsworth for <a href="https://github.com/neilorangepeel/Free-Social-Icons">Social icons</a></p>
             </div>
         </div>
     </div>

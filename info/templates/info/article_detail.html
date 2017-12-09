@@ -1,5 +1,7 @@
 {% extends 'info/base.html' %}
 
+{% block title %}{{ article.title }}{% endblock %}
+
 {% block content %}
     <span class="date">{{ article.published }}</span>
     <span class="tags">
