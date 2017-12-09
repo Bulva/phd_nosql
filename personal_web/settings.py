@@ -25,7 +25,7 @@ SECRET_KEY = '$v-a^tjz2(wz^jw+^(kx5sa$o1hhi-@virs5qj+*sr&#iawtd-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['petrsilhak.cz', '185.8.237.163']
 
 
 # Application definition
