@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 {% load staticfiles %}
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Petr Šilhák | {% block title %}{% endblock %}</title>
@@ -17,7 +18,7 @@
                 <ul>
                     <li><a href="{% url 'index' %}">Home</a></li>
                     <li><a href="{% url 'about me' %}">About Me</a></li>
-                    <!--This should be portofolio, it is because of Ostrava bio-->
+                    <!--This should be portfolio, it is because of Ostrava bio-->
                     <li><a href="{% url 'portfolio' %}">Bio</a></li>
                     <li><a href="{% url 'contact' %}">Contact</a></li>
                 </ul>
