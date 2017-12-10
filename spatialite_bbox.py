@@ -1,8 +1,16 @@
 from pyspatialite import dbapi2 as db
+import csv, time
 
 conn = db.connect('phd.sqlite')
 cur = conn.cursor()
 
-roads = cur.execute('SELECT * FROM roads')
-for row in roads:
-    print(row[0], row[1], row[2])
+f = open('spatialite_bbox_time.csv', 'w')
+with open('bboxs.csv') as file:
+    reader = csv.reader(file, delimiter='\t')
+    for row in reader:
+        start = time.time()
+        roads = cur.execute(row[1])
+        end = time.time()
+        diff = end - start
+        f.write(row[1]+'\t'+str(diff)+'\n')
+f.close()
