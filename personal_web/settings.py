@@ -25,13 +25,15 @@ SECRET_KEY = '$v-a^tjz2(wz^jw+^(kx5sa$o1hhi-@virs5qj+*sr&#iawtd-'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['petrsilhak.cz', '185.8.237.163']
+ALLOWED_HOSTS = ['petrsilhak.cz', '185.8.237.163', 'localhost']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'info',
+    'skrabappka',
+    'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -104,19 +106,22 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DATETIME_FORMAT': '%d.%m.%Y %H:%M',
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'CET'
 
-USE_I18N = True
+USE_I18N = False
 
-USE_L10N = True
+USE_L10N = False
 
-USE_TZ = True
+#USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
