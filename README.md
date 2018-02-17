@@ -17,5 +17,7 @@ Závěrem lze tedy říci, že ačkoliv MongoDB a nerelační databáze vykazuj�
 
 Veškeré použité soubory a kódy se nacházejí v repozitáři.
 
+![alt meme](https://memegenerator.net/img/instances/66609673/im-not-sure-why-my-code-works-and-ad-this-point-im-too-afraid-to-debug.jpg "")
+
 
 
