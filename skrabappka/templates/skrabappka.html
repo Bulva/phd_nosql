@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Škrabkání</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+
+        <div class="col-sm-9">
+
+            <div class="col-sm-6">
+                <p style="text-align: center; font-weight: bold; font-size: 20px;">Pro Bucánka</p>
+                <div id="bucanek-well" class="well" style="padding: 5px 0 0 0;">
+                    <p class="bucanek-sum" style="text-align: center; font-weight: bold; font-size: 20px;"></p>
+                </div>
+            </div>
+
+            <div class="col-sm-6">
+                <p style="text-align: center; font-weight: bold; font-size: 20px;">Pro Bulvu</p>
+                <div id="bulva-well" class="well" style="padding: 5px 0 0 0;">
+                    <p class="bulva-sum" style="text-align: center; font-weight: bold; font-size: 20px;"></p>
+                </div>
+            </div>
+
+            <div class="col-sm-6 text-center">
+            <button class="bucanek push_button red">Škrabkání pro Bucánka</button>
+             </div>
+                <div class="col-sm-6 centered">
+            <button class="bulva push_button blue">Škrabkání pro Bulvu</button>
+                    </div>
+        </div>
+
+        <div class="col-sm-3">
+            <div id="group" class="panel-group">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function updateMinutes() {
+        $('.bucanek-sum').empty();
+        $('.bulva-sum').empty();
+        $.ajax({
+            url: '{% url "summary" %}',
+            type: 'GET',
+            'data': {},
+            error: function (req, err) {
+                console.log('my message ' + err);
+            },
+            success: function (result) {
+                $('.bucanek-sum').text(result.bucanek + " minut");
+                $('.bulva-sum').text(result.bulva + " minut");
+            }
+        });
+    }
+
+    function updatePanel() {
+        $('#group').empty();
+        $.ajax({
+            url: '{% url "skrabani" %}',
+            type: 'GET',
+            'data': {},
+            error: function (req, err) {
+                console.log('my message ' + err);
+            },
+            success: function (result) {
+                for (var i = 0; i < result.length; i++) {
+                    $('#group').append(" <div class=\"panel panel-default\">\n" +
+                        "                        <div class=\"panel-heading\">\n" +
+                        "                            <div class=\"panel-body\">\n" +
+                        "                                <b>Čas odeslání:</b>" + result[i].dateandtime + "<br/>\n" +
+                        "                                <b>Pro koho: </b>" + result[i].person + "<br/>\n" +
+                        "                            </div>\n" +
+                        "                        </div>\n" +
+                        "                    </div>");
+                }
+            }
+        });
+    }
+
+    $(document).ready(function () {
+        updatePanel();
+        updateMinutes();
+    });
+
+    $('.bucanek').on('click', function () {
+        $.ajax({
+            url: '{% url "skrabani" %}',
+            type: 'POST',
+            'data': {
+                'person': 'Bucanek',
+                'minutes': '1',
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            error: function (req, err) {
+                console.log('my message ' + err);
+            },
+            success: function (result) {
+                updatePanel();
+                updateMinutes();
+            }
+        });
+    });
+
+    $('.bulva').on('click', function () {
+        $.ajax({
+            url: '{% url "skrabani" %}',
+            type: 'POST',
+            'data': {
+                'person': 'Bulva',
+                'minutes': '1',
+                'csrfmiddlewaretoken': '{{ csrf_token }}'
+            },
+            error: function (req, err) {
+                console.log('my message ' + err);
+            },
+            success: function (result) {
+                updatePanel();
+                updateMinutes();
+            }
+        });
+    });
+</script>
+</body>
+</html>

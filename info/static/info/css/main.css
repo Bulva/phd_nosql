@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css?family=Lora|Open+Sans:500&subset=latin-ext');
+
+html, body {
+    height:100%;
+    position: relative;
+}
+
+#bio {
+    background-color: #C0B283;
+    padding: 20px 0 0 0;
+}
+
+#bio h4 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    color: #373737;
+    padding: 30px 0 0 0;
+}
+
+#bio h5 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    color: #373737;
+    margin: 15px 0 0 0;
+}
+
+#middle .intro {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 25px;
+    font-style: italic;
+    color: #000000;
+}
+
+#middle {
+    background-color: #F4F4F4;
+    font-family: 'Lora', serif;
+    font-size: 18px;
+    color: #454646;
+    padding: 35px 200px 0 90px;
+}
+
+#middle h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    color: #000000;
+    text-decoration: none;
+    text-decoration-color: #000000;
+}
+
+#middle a:hover > h3:hover{
+    text-decoration: underline;
+}
+
+#middle a:hover {
+    text-decoration: none;
+}
+
+#middle .date {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: italic;
+    color: #73737f;
+}
+
+#middle .tags {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    font-size: 15px;
+    font-style: italic;
+    float: right;
+    color: #73737f;
+}
+
+#middle hr {
+    margin-top: 7px;
+}
+
+#content {
+    background-color: #F4F4F4;
+}
+
+#navbar {
+    padding: 0 0 30px 80px;
+    margin-top: 20px;
+}
+
+#navbar ul {
+    list-style-type: none;
+}
+
+#navbar li {
+    margin-bottom: 5px;
+}
+
+#navbar a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #373737;
+}
+
+.page-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #373737;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #373737;
+    margin: 15px 0 0 0;
+}
+
+.quote-author {
+    font-style: italic;
+    text-align: right;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #73737f;
+}
+
+#about-bulva {
+    text-align: center;
+}
+
+.article {
+    margin-bottom: 60px;
+}
+
+.icon {
+    width: 30px;
+    margin: 10px 0 0 10px;
+}
+
+.form-control {
+    margin-bottom: 10px;
+}
+
+label {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #373737;
+}
+
+.send-button {
+    margin: 5px 0 20px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #373737;
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    border: 1px solid #C0B283;
+    background-color: #DCD0C0;
+    float: right;
+    cursor: pointer;
+}
+
+.send-button:hover {
+    background-color: #e8dbca;
+}
+
+#footer {
+    clear: both;
+    padding: 20px 0 0 0;
+}
+
+#footer p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #373737;
+    text-align: center;
+}

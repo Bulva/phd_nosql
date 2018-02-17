@@ -1,0 +1,20 @@
+{% extends 'info/base.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+    <span class="date">{{ article.published }}</span>
+    <span class="tags">
+    {% for tag in article.tags.all %}
+        {% if forloop.last %}
+            <a href="">#{{ tag.name }}</a>
+        {% else %}
+            <a href="">#{{ tag.name }} </a>
+        {% endif %}
+    {% endfor %}
+    </span>
+    <hr />
+    <h3>{{ article.title }}</h3>
+    <p class="intro">{{ article.intro }}</p>
+    <p class="text">{{ article.text }}</p>
+{% endblock %}
