@@ -1,3 +1,4 @@
+###### Skupina Brodský, Málek, Šilhák
 # Úkol č. 1
 Srovnání rychlosti vykonání 50 náhodně vygenerovaných BBOXů ve SpatiaLite a MongoDB. Jako univerzální řešení bylo vybráno využití Pythonu, pro který existují API pro obě databáze. Použitá data se nacházejí ve složce *data*.
 
